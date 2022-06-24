@@ -19,10 +19,10 @@ window.onload=function(){
     const encoder = new TextEncoder()
     const view = encoder.encode(qp);
     
-    let encodedStr = view.toString();
-    encodedStr = encodedStr.replace(/,/gi,'/');
+    //let encodedStr = view.toString();
+    //encodedStr = encodedStr.replace(/,/gi,'/');
 
-
+ var encodedStr = CryptoJS.AES.encrypt(fname+"!SpC!"+sname+"!SpC!"+note, '#');
 
     
     var link=document.getElementById("pwd");
